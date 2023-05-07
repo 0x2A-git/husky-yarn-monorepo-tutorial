@@ -1,0 +1,19 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "pre-commit": "yarn workspaces foreach run pre-commit"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
+  },
+  "packageManager": "yarn@3.5.1"
+}
